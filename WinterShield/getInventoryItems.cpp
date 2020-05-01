@@ -84,6 +84,27 @@ void acceptCargo(int& r_cargo, string& r_fullInventory, int& r_openSlots, int& r
 	}
 
 }
+//Function to sell cargo
+void sellCargo(int& r_credits, int& r_cargo, string& r_invalid, string& r_captain, int& r_numberOfCargo)
+{
+	int income;
+
+	cout << r_captain << " You currently have " << r_cargo << " cargo containers.\n";
+	cout << "How many cargo containers would you like to sell?\n";
+	cin >> r_numberOfCargo;
+	if (r_numberOfCargo > r_cargo)
+	{
+		cout << r_invalid << endl;
+	}
+	else
+	{
+		income = r_numberOfCargo * 100;
+		r_cargo = r_cargo - r_numberOfCargo;
+		r_credits = r_credits + income;
+		cout << r_captain << " You now have " << r_credits << " credits.\n";
+	}
+
+}
 //Function to accept contraband
 void acceptContraband(int& r_contraband, string& r_fullInventory, int& r_openSlots, int r_numberOfContraband)
 {
@@ -98,4 +119,25 @@ void acceptContraband(int& r_contraband, string& r_fullInventory, int& r_openSlo
 		cout << "You now have " << r_contraband << " contraband containers.\n";
 		//cout << "Your ship has " << r_openSlots << " inventory spaces left available.\n";
 	}
+}
+//Function to sell Contraband
+void sellContraband(int& r_credits, int& r_contraband, string& r_invalid, string& r_captain, int& r_numberOfContraband)
+{
+	int income;
+
+	cout << r_captain << " You currently have " << r_contraband << " contraband containers.\n";
+	cout << "How many contraband containers would you like to sell?\n";
+	cin >> r_numberOfContraband;
+	if (r_numberOfContraband > r_contraband)
+	{
+		cout << r_invalid << endl;
+	}
+	else
+	{
+		income = r_numberOfContraband * 200;
+		r_contraband = r_contraband - r_numberOfContraband;
+		r_credits = r_credits + income;
+		cout << r_captain << " You now have " << r_credits << " credits.\n";
+	}
+
 }

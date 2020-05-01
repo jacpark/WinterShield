@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Crew.cpp" />
     <ClCompile Include="getInputFromUser.cpp" />
     <ClCompile Include="planets.cpp" />
     <ClCompile Include="playerShip.cpp" />
@@ -130,6 +131,7 @@
     <ClCompile Include="getInventoryItems.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Crew.h" />
     <ClInclude Include="getInputFromUser.h" />
     <ClInclude Include="getInventoryItems.h" />
     <ClInclude Include="planets.h" />

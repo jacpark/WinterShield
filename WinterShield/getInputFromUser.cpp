@@ -52,6 +52,10 @@ void locationSelection(string& r_locationChoice, int& r_story, string& r_invalid
 	{
 		r_story = 4;
 	}
+	else if (r_locationChoice == "Chondax" || r_locationChoice == "chondax")
+	{
+		r_story = 5;
+	}
 	else
 	{
 		cout << r_invalid << endl;

@@ -123,3 +123,12 @@ void cargoBay(int& r_gas, int& r_parts, int& r_credits, int& r_cargo, int& r_con
 	int totalStuff = r_gas + r_parts + r_cargo + r_contraband;
 	r_openSlots = r_storage - totalStuff;
 }
+//subtract gas when player moves
+void fuelExpendature(int& r_gas)
+{
+	r_gas = r_gas - 1;
+	if (r_gas == 1)
+	{
+		cout << "Your fuel is getting dangerously low, fuel up or you will end up becalmed in the vastness of space.\n";
+	}
+}
